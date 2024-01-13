@@ -18,11 +18,11 @@ def execute_opencv():
     if not video_feed_running:
         ssh = paramiko.SSHClient()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        ssh.connect('192.168.1.102', username='ubuntu', password='ubuntu')
+        ssh.connect('192.***.*.***', username='<xyz>', password='<password>')
     
 
         # Command to run OpenCV script in shell mode
-        command = '/home/ubuntu/Python-3.9.18/python /home/ubuntu/Desktop/app.py'
+        command = '/path/to/Python-3.9.18/python /path/to/pythonscript/'
 
         # Execute the command
         stdin, stdout, stderr = ssh.exec_command(command)
